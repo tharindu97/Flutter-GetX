@@ -11,15 +11,19 @@ class OtherPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Pages was Clicked ${counterController.counter.value} times"),
+          Center(
+              child: Text(
+                  "Pages was Clicked ${counterController.counter.value} times")),
           SizedBox(
             height: 10.0,
           ),
-          ElevatedButton(
-              onPressed: () {
-                Get.back();
-              },
-              child: Text('Open Other Screen'))
+          Center(
+            child: ElevatedButton(
+                onPressed: () {
+                  Get.back();
+                },
+                child: Text('Back')),
+          )
         ],
       ),
     );

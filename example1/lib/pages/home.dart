@@ -9,21 +9,23 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(child: Text('Clickes!: ${counterController.counter.value}')),
-          SizedBox(
-            height: 10.0,
-          ),
-          Center(
-            child: ElevatedButton(
-                onPressed: () {
-                  Get.to(OtherPage());
-                },
-                child: Text('Open Other Screen')),
-          )
-        ],
+      body: Obx(
+        () => Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(child: Text('Clickes!: ${counterController.counter.value}')),
+            SizedBox(
+              height: 10.0,
+            ),
+            Center(
+              child: ElevatedButton(
+                  onPressed: () {
+                    Get.to(OtherPage());
+                  },
+                  child: Text('Open Other Screen')),
+            )
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
